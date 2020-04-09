@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Star Restaurant Reservation Page</title>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <!-- icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+  <div class="container indigo lighten-3" style="padding: 10px 20px 20px 20px; margin-top: 30px;">
+    <h1 style="font-family: 'Abril Fatface', cursive; color: #1a237e;"><i class="medium material-icons"
+        style="margin-right: 10px;">stars</i>Star Restaurant</h1>
+    <p style="font-family: 'Abril Fatface', cursive; color: #1a237e;font-size: 23px;">We only have 5 tables! Reserve
+      your seats to
+      avoid waiting!</p>
+    <div class="divider"></div>
+    <div class="row center-align" style="padding-top: 10px;">
+      <a href="checktable" style="margin: 10px" class="waves-effect waves-light indigo darken-4 btn-large" id="check"><i
+          class="material-icons left">local_dining</i>Check the tables</a>
+      <a href="reservation" style="margin: 10px" class="waves-effect waves-light indigo darken-4 btn-large"
+        id="reservation"><i class="material-icons left">event_available</i>Make a reservation</a>
+    </div>
+
+  </div>
+  <div class="row center-align">
+    <a href="api/reservationlist" style="padding-right:30px">API | Reservation List Link</a>
+    <a href="api/waitlist" style="padding:10px">API | Waitlist Link</a>
+  </div>
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

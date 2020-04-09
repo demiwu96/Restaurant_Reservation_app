@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Form Page</title>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="container" style="padding: 0px 20px 10px 20px; margin-top: 30px;">
+        <h1 class="center-align" style="font-family: 'Abril Fatface', cursive;">Reservation Form</h1>
+        <div style="margin-bottom: 10px;">
+            <a href="checktable" class="waves-effect waves-light indigo darken-4 btn" id="check"><i
+                    class="material-icons left">local_dining</i>Check the tables</a>
+            <a href="/" class="waves-effect waves-light indigo darken-4 btn" id="check"><i
+                    class="material-icons left">home</i>Back</a>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <p style="font-family: 'Abril Fatface', cursive; font-size: 23px;">Please leave your
+                name and contact information: </p>
+            <div class="col m4"></div>
+            <form class="col s12 m4">
+                <div class="row">
+                    <div class="input-field">
+                        <input id="firstName" placeholder="First Name" type="text" class="validate" required=""
+                            aria-required="true">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input placeholder="Last Name" id="lastName" type="text" class="validate" required=""
+                            aria-required="true">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input placeholder="Contact Number" id="phone" type="number" class="validate" required=""
+                            aria-required="true">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input placeholder="How many people..." id="people" type="number" class="validate" min="1"
+                            max="6" required>
+                    </div>
+                </div>
+                <div class="row center-align">
+                    <button class="btn waves-effect waves-light indigo darken-4" type="submit"
+                        id="submit">Submit</button>
+                </div>
+            </form>
+            <div class="col m4"></div>
+        </div>
+
+        <script src="index.js"></script>
+        <!-- <script type="text/javascript">
+            $("#submit").on("click", function (event) {
+                event.preventDefault();
+                let newCustomer = {
+                    firstName: $("#firstName").val().trim(),
+                    lastName: $("#lastName").val().trim(),
+                    number: $("#phone").val().trim(),
+                    people: $("#people").val().trim()
+                };
+
+                $.post("/api/reservationlist", newCustomer)
+                    .then(function (data) {
+                        console.log(data);
+
+                        if (data == true) {
+                            alert("Reserved!!");
+                        } else if (data == false) {
+                            alert("You are on the waitlist");
+                        };
+
+                        $("#firstName").val("");
+                        $("#lastName").val("");
+                        $("#phone").val("");
+                        $("#people").val("");
+                    });
+            });
+        </script> -->
+</body>

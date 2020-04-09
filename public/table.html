@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Check Reservation Page</title>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <div class="container indigo lighten-3" id="reservationDiv" style="padding: 10px 20px 20px 20px; margin-top: 30px;">
+        <h1 class="center-align" style="font-family: 'Abril Fatface', cursive;color:#1a237e;">Reservation Checklist</h1>
+        <div class="divider"></div>
+    </div>
+    <div class="container indigo lighten-3" id="waitlistDiv" style="padding: 10px 20px 20px 20px; margin-top: 30px;">
+        <h1 class="center-align" style="font-family: 'Abril Fatface', cursive;color:#1a237e;">Waitlist</h1>
+        <div class="divider"></div>
+    </div>
+    <div class="container indigo lighten-3" style="padding-top:10px;padding-bottom:20px;">
+        <div class="row center-align">
+            <a class="waves-effect waves-light indigo darken-4 btn" style="margin: 10px" id="clear"><i
+                    class="material-icons left">cached</i>Clear all reservations</a>
+            <a href="reservation" class="waves-effect waves-light indigo darken-4 btn" style="margin: 10px"
+                id="reservation"><i class="material-icons left">event_available</i>Make a reservation</a>
+            <a href="/" class="waves-effect waves-light indigo darken-4 btn" style="margin: 10px" id="check"><i
+                    class="material-icons left">home</i>Back</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="index.js"></script>
+    <!-- <script type="text/javascript">
+        $.get("/api/reservationlist", data => {
+            renderReservationList(data);
+        });
+
+        $.get("/api/waitlist", data => {
+            renderWaitlist(data);
+        });
+
+        $(document).on('click', '.cancel-reservation', function () {
+            alert("Are you sure you want to cancel the reservation?");
+            let index = $(this).attr("data-index");
+            let indexData = {
+                index: index
+            };
+            $.post("/api/cancelreservation", indexData)
+                .then(() => {
+                    location.reload();
+                });
+        })
+
+
+        $(document).on("click", '.cancel-waitlist', function () {
+            alert("Are you sure you want to cancel the reservation?");
+            let index = $(this).attr("data-index");
+            let indexData = {
+                index: index
+            };
+            $.post("/api/cancelwaitlist", indexData)
+                .then(() => {
+                    location.reload();
+                });
+        })
+
+        $("#clear").click(() => {
+            alert("Are you sure you want to clear all reservations?");
+            $.get("/api/clearall")
+                .then(res => {
+                    location.reload();
+                });
+        });
+
+        const renderReservationList = function (arr) {
+            let collectionDiv = $('<ul class="collection collection-table">');
+            $("#reservationDiv").append(collectionDiv);
+
+            for (var i = 0; i < arr.length; i++) {
+                let collectionItem = $('<li class="collection-item avatar">');
+                let icon = $('<i class="material-icons circle indigo darken-4">');
+                let btn = $('<a class="waves-effect waves-light indigo darken-4 btn right" style="margin: 10px">');
+                btn.addClass("cancel-reservation");
+                collectionItem.append(icon.text("filter_" + (i + 1)).css("font-size", "25px"));
+                collectionItem.append($("<h4>").text(arr[i].firstName + " " + arr[i].lastName).css("margin-top", "5px"));
+                collectionItem.append(btn.text("Cancel").attr("data-index", i));
+                collectionItem.append($("<h5>").text("Phone number: " + arr[i].number));
+                collectionItem.append($("<h5>").text("People: " + arr[i].people));
+                collectionDiv.append(collectionItem);
+            };
+        }
+
+        const renderWaitlist = function (arr) {
+            let collectionDiv = $('<ul class="collection collection-waitlist">');
+            $("#waitlistDiv").append(collectionDiv);
+
+            for (var i = 0; i < arr.length; i++) {
+                let collectionItem = $('<li class="collection-item avatar">');
+                let icon = $('<i class="material-icons circle indigo darken-4">');
+                let btn = $('<a class="waves-effect waves-light indigo darken-4 btn right" style="margin: 10px">');
+                btn.addClass("cancel-waitlist");
+                collectionItem.append(icon.text("star_border").css("font-size", "25px"));
+                collectionItem.append($("<h4>").text(arr[i].firstName + " " + arr[i].lastName).css("margin-top", "5px"));
+                collectionItem.append(btn.text("Cancel").attr("data-index", i));
+                collectionItem.append($("<h5>").text("Phone number: " + arr[i].number));
+                collectionItem.append($("<h5>").text("People: " + arr[i].people));
+                collectionDiv.append(collectionItem);
+            }
+        }
+    </script> -->
+</body>
