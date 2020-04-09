@@ -17,4 +17,4 @@ This is a web page for restaurant reservation. Customers need to enter their nam
 Yu-Hsuan Wu
 
 ## Demo
-(Click here)[https://restaurantreservation-042020.herokuapp.com/] to see my project
+[Click here](https://restaurantreservation-042020.herokuapp.com/) to see my project
