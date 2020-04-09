@@ -15,3 +15,6 @@ This is a web page for restaurant reservation. Customers need to enter their nam
 
 ## Credits
 Yu-Hsuan Wu
+
+## Demo
+(Click here)[https://restaurantreservation-042020.herokuapp.com/] to see my project
